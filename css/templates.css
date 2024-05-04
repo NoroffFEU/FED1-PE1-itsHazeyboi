@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+}
+
+header {
+
+}
+
+.header-top {
+    background-color: #201C34;
+    height: 40px;
+}
+
+.header-bottom {
+    background-color: #282444;
+    height: 80px;
+}
+
+footer {
+
+}
+
+
+
+
+/* ------------------- Templates for more common use-case ---------------------- */
+
+
+
+
+.flex-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-r {
+    display: flex;
+    flex-direction: row;
+}
+
+.center-horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.center-vertical {
+    display: flex;
+    justify-content: center;
+}
+
+.center-both {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.username-form {
+
+}
+
+.password-form {
+
+}
+
+
+.button-round {
+
+}
+
+.button-square {
+
+}
+
+
