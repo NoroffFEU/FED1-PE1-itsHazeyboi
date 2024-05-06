@@ -1,27 +1,3 @@
-body {
-    margin: 0;
-}
-
-header {
-
-}
-
-.header-top {
-    background-color: #201C34;
-    height: 40px;
-}
-
-.header-bottom {
-    background-color: #282444;
-    height: 80px;
-}
-
-footer {
-
-}
-
-
-
 
 /* ------------------- Templates for more common use-case ---------------------- */
 
@@ -36,6 +12,11 @@ footer {
 .flex-r {
     display: flex;
     flex-direction: row;
+}
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
 }
 
 .center-horizontal {
@@ -55,6 +36,11 @@ footer {
 }
 
 
+.text-highlight {
+    cursor: pointer;
+}
+
+
 .username-form {
 
 }
@@ -66,6 +52,14 @@ footer {
 
 .button-round {
 
+}
+
+.create-post-button {
+    gap: 10px;
+    background-color: #201C34;
+    padding: 5px 20px 5px 20px;
+    border-radius: 40px;
+    cursor: pointer;
 }
 
 .button-square {
