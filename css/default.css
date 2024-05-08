@@ -37,13 +37,18 @@ header {
 
 
 main {
-
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer {
     height: 250px;
     background-color: #282444;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     gap: 20vw;
@@ -72,3 +77,28 @@ footer {
     cursor: pointer;
 }
 
+
+
+
+/* -------------------------------------- LOADER ------------------------------------------ */
+
+#loader {
+    width: 8vw;
+    height: 8vw;
+    left: 45vw;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 

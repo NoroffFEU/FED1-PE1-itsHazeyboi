@@ -50,6 +50,11 @@
 }
 
 
+button {
+
+}
+
+
 .button-round {
 
 }
@@ -63,7 +68,13 @@
 }
 
 .button-square {
-
+    gap: 10px;
+    font-size: 20px;
+    background-color: #2B2B2B;
+    width: fit-content;
+    padding: 0px 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 

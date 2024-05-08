@@ -1,0 +1,54 @@
+#arrow-down {
+    width: 30px;
+}
+
+
+.carousel-container {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.test1 {
+    position: absolute;
+    top: 720px;
+    margin-left: 40px;
+}
+
+
+.carousel-blog-post-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+.all-blogposts-wrapper {
+
+}
+
+.blogposts-text {
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.blogposts-list {
+    gap: 4vw;
+    flex-wrap: wrap;
+}
+
+.blogpost-image {
+    object-fit: cover;
+    height: 200px;
+} 
+
+
+.post-container {
+    width: 356px;
+}
+
+.postcontainer-bottom{
+    padding: 20px;
+    height: 150px;
+    background-color: #2B2B2B;
+}
+
