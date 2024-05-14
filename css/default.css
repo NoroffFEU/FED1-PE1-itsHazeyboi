@@ -1,104 +1,117 @@
+/* The point of this CSS file is to prevent me having to re-write things I use alot,
+aka the 'default' items that stay the same, unless viewporting. */
+
 body {
-    margin: 0;
-    font-family: sans-serif, 'inter';
-    color: aliceblue;
-    background-color: #212121;
+  margin: 0;
+  font-family: sans-serif, "inter";
+  color: aliceblue;
+  background-color: #212121;
 }
 
 header {
-
 }
 
 .header-top {
-    background-color: #201C34;
-    height: 50px;
-    padding: 0px 30px;
-    gap: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-    font-size: 12px;
+  background-color: #201c34;
+  height: 50px;
+  padding: 0px 30px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  font-size: 12px;
+}
+
+.text-highlight {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .header-bottom {
-    background-color: #282444;
-    height: 100px;
-    padding: 0px 30px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
+  background-color: #282444;
+  height: 100px;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
 }
 
 .logoimage {
-    width: 200px;
-    cursor: pointer;
+  width: 200px;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
+.logoimage:hover {
+  transition: 0.4s;
+  scale: 1.05;
+}
+
+.headTextWrapper {
+  gap: 30px;
+  margin-bottom: 40px;
+}
 
 main {
-    width: 100%;
-    align-items: center;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 100%;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 footer {
-    height: 250px;
-    background-color: #282444;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    gap: 20vw;
-
+  height: 250px;
+  background-color: #282444;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  gap: 20vw;
 }
 
 .footer-infobox {
-    align-items: center;
+  align-items: center;
 }
 
 .footer-header {
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: 600;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .footer-p {
-    transition: 0.3s;
-    color: #746e9c;
-    cursor: pointer;
+  transition: 0.3s;
+  color: #746e9c;
+  cursor: pointer;
 }
 
 .footer-p:hover {
-    transition: 0.3s;
-    color: #a39bd9;
-    cursor: pointer;
+  transition: 0.3s;
+  color: #a39bd9;
+  cursor: pointer;
 }
-
-
-
 
 /* -------------------------------------- LOADER ------------------------------------------ */
 
 #loader {
-    width: 8vw;
-    height: 8vw;
-    left: 45vw;
-    border: 5px solid #FFF;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
+  width: 8vw;
+  height: 8vw;
+  left: 45vw;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
