@@ -34,6 +34,12 @@
 
 .post-container {
   width: 356px;
+  transition: 0.2s;
+}
+
+.post-container:hover {
+  transition: 0.2s;
+  transform: scale(1.15);
 }
 
 .postcontainer-bottom {
