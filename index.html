@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechByte Home - Blogposts</title>
-    <meta
-      name="description"
-      content="Our homepage containing all our glorious blog posts"
-    />
+    <meta name="description" content="Our homepage containing all our glorious blog posts" />
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/templates.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -16,101 +14,68 @@
     <script type="module" src="js/features/checkLogin.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="media/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="media/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="media/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="media/favicons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="media/favicons/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 
-  <body>
+</head>
+
+<body>
     <header class="flex-c">
-      <div class="header-top align-end">
-        <a class="text-highlight" href="account/login.html"> Sign in </a>
-        <p>|</p>
-        <a class="text-highlight" href="account/register.html"> Register </a>
-      </div>
-      <div class="header-bottom center-horizontal">
-        <img class="logoimage" src="media/favicons/Logo.svg" alt="Logo Image" />
-        <a class="text-highlight" href="post/createpost.html">
-          <div class="create-post-button flex-r">
-            <p>Create Post</p>
-            <img src="media/favicons/plus-sign.svg" alt="create post button" />
-          </div>
-        </a>
-      </div>
+        <div class="header-top align-end">
+            <a class="text-highlight" href="account/login.html"> Sign in </a>
+            <p>|</p>
+            <a class="text-highlight" href="account/register.html"> Register </a>
+        </div>
+        <div class="header-bottom center-horizontal">
+            <img class="logoimage" src="media/favicons/Logo.svg" alt="Logo Image" />
+            <a class="text-highlight" href="post/createpost.html">
+                <div class="create-post-button flex-r">
+                    <p>Create Post</p>
+                    <img src="media/favicons/plus-sign.svg" alt="create post button" />
+                </div>
+            </a>
+        </div>
     </header>
     <main>
-      <div class="carousel-container flex-r center-vertical">
-        <img src="media/favicons/Scroll button left.svg" alt="scroll left" />
-        <div class="carousel-blog-post">
-          <img
-            class="carousel-blog-post-image"
-            src="media/2020_08_Trending-Technologies-scaled.jpg"
-            alt="big blogpost"
-          />
-          <div class="carousel-text">
-            <h3>Title</h3>
-          </div>
+        <div class="carousel-container flex-r center-vertical">
+            <img src="media/favicons/Scroll button left.svg" alt="scroll left" />
+            <div class="carousel-blog-post">
+                <img class="carousel-blog-post-image" src="media/2020_08_Trending-Technologies-scaled.jpg"
+                    alt="big blogpost" />
+                <div class="carousel-text">
+                    <h3>Title</h3>
+                </div>
+            </div>
+            <img src="media/favicons/Scroll button right.svg" alt="scroll right" />
         </div>
-        <img src="media/favicons/Scroll button right.svg" alt="scroll right" />
-      </div>
-      <div class="headTextWrapper flex-r center-vertical">
-        <img src="media/favicons/Line.svg" alt="line" />
-        <h1>Blog Posts</h1>
-        <img src="media/favicons/Line.svg" alt="line" />
-      </div>
-      <div class="all-blogposts-wrapper">
-        <div id="loader" style="display: none"></div>
-        <ul class="flex-r blogposts-list center-vertical"></ul>
-      </div>
-      <div class="button-square center-both">
-        <p>See More</p>
-        <img
-          id="arrow-down"
-          src="media/favicons/Thick Arrow Pointing Down.svg"
-          alt="arrow down"
-        />
-      </div>
+        <div class="headTextWrapper flex-r center-vertical">
+            <img src="media/favicons/Line.svg" alt="line" />
+            <h1>Blog Posts</h1>
+            <img src="media/favicons/Line.svg" alt="line" />
+        </div>
+        <div class="all-blogposts-wrapper">
+            <div id="loader" style="display: none"></div>
+            <ul class="flex-r blogposts-list center-vertical"></ul>
+        </div>
+        <div class="button-square center-both">
+            <p>See More</p>
+            <img id="arrow-down" src="media/favicons/Thick Arrow Pointing Down.svg" alt="arrow down" />
+        </div>
     </main>
     <footer class="flex-r center-horizontal center-vertical">
-      <div class="footer-infobox">
-        <p class="footer-header">Information</p>
-        <p class="footer-p">Contact Us</p>
-        <p class="footer-p">Privacy Policy</p>
-        <p class="footer-p">Terms And Conditions</p>
-      </div>
-      <img class="logoimage" src="media/favicons/Logo.svg" alt="Tech5 Logo" />
-      <div class="footer-infobox">
-        <p class="footer-header">About Us</p>
-        <p class="footer-p">Sponsors</p>
-        <p class="footer-p">Who we are</p>
-        <p class="footer-p">Charities</p>
-      </div>
+        <div class="footer-infobox">
+            <p class="footer-header">Information</p>
+            <p class="footer-p">Contact Us</p>
+            <p class="footer-p">Privacy Policy</p>
+            <p class="footer-p">Terms And Conditions</p>
+        </div>
+        <img class="logoimage" src="media/favicons/Logo.svg" alt="Tech5 Logo" />
+        <div class="footer-infobox">
+            <p class="footer-header">About Us</p>
+            <p class="footer-p">Sponsors</p>
+            <p class="footer-p">Who we are</p>
+            <p class="footer-p">Charities</p>
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
