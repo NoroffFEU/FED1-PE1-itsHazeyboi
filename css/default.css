@@ -28,6 +28,10 @@ header {
   text-decoration: none;
 }
 
+textarea {
+  resize: none;
+}
+
 .header-bottom {
   background-color: #282444;
   height: 100px;

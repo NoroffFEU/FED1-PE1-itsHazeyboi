@@ -63,3 +63,10 @@ document.querySelector("form").addEventListener("submit", function (event) {
     .then(window.alert("Post Created Successfully"))
     .then((window.location.href = "../index.html"));
 });
+
+export function updateCounter() {
+  const textArea = document.getElementById("postContentForm");
+  const counter = document.getElementById("counter");
+
+  counter.innerText = `${textArea.value.length}/2000`;
+}

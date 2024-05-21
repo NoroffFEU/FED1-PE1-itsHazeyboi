@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/templates.css">
     <script type="module" src="../js/features/createPost.mjs"></script>
-    <script type="module" src="../js/features/checkLogin.mjs"></script>
+    <script type="module">
+        import { updateCounter } from '../js/features/createPost.mjs';
+        window.updateCounter = updateCounter;
+    </script>
     <link rel="icon" type="image/x-icon" href="../media/favicons/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +31,6 @@
         <div class="header-bottom center-horizontal">
             <a href="../index.html"><img class="logoimage" src="../media/favicons/Logo.svg" alt="Logo Image"></a>
         </div>
-
     </header>
     <main>
         <div class="headTextWrapper flex-r center-vertical">
@@ -46,7 +48,9 @@
             <label for="postTitleForm"> Post Title </label>
             <input type="text" id="postTitleForm" placeholder="Enter post title">
             <label for="postContentForm"> Post Content </label>
-            <textarea id="postContentForm" rows="12" placeholder="Enter post content"></textarea>
+            <textarea id="postContentForm" maxlength="2000" oninput="updateCounter()" rows="12"
+                placeholder="Enter post content"></textarea>
+            <p id="counter">0/2000</p>
             <div class="buttonWrapper center-both">
                 <button class="button-square2"> Create Post </button>
             </div>

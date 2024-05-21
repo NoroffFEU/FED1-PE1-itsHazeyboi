@@ -35,6 +35,7 @@
 .post-container {
   width: 356px;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .post-container:hover {

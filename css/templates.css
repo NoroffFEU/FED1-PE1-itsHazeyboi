@@ -85,3 +85,15 @@ button {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.button-round2 {
+  gap: 10px;
+  font-size: 20px;
+  background-color: #2b2b2b;
+  color: white;
+  width: fit-content;
+  padding: 15px 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 50px;
+}

@@ -30,5 +30,11 @@
 
 #postContentForm {
   height: auto;
+  margin-bottom: 0px;
+}
+
+#counter {
+  margin-top: 0px;
+  align-self: flex-end;
   margin-bottom: 60px;
 }
