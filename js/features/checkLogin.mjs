@@ -2,17 +2,31 @@ import { loginAPI } from "./API.mjs";
 import { myFetcher } from "./fetcher.mjs";
 import { createPostButton } from "./createPostButton.mjs";
 
-function checkLogin() {
+export function checkLogin() {
   let topHeaderChange = document.querySelector(".header-top");
   let signInText = document.getElementById("signInText");
   let registerText = document.getElementById("registerText");
   let getUserProfile = JSON.parse(localStorage.getItem("userProfile"));
   let localAccessToken = localStorage.getItem("accessToken");
-  console.log(getUserProfile);
 
-  if (getUserProfile.accessToken === localAccessToken) {
-    createPostButton();
+  if (
+    getUserProfile &&
+    localAccessToken &&
+    getUserProfile.accessToken === localAccessToken
+  ) {
+    const pathName = window.location.pathname;
+    if (
+      !pathName.endsWith("/post/createpost.html") &&
+      !pathName.endsWith("/account/login.html") &&
+      !pathName.endsWith("/account/register.html") &&
+      localAccessToken &&
+      getUserProfile &&
+      getUserProfile.accessToken === localAccessToken
+    ) {
+      createPostButton();
+    }
     signInText.innerText = `Signed in as: ${getUserProfile.name}`;
+    signInText.removeAttribute("href");
     registerText.innerText = "Sign Out";
     registerText.addEventListener("click", function () {
       registerText.setAttribute("href", "");

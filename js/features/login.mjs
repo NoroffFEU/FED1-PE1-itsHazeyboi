@@ -1,4 +1,10 @@
 import { loginAPI } from "./API.mjs";
+import { checkLogin } from "./checkLogin.mjs";
+
+let localAccessToken = localStorage.getItem("accessToken");
+let getUserProfile = JSON.parse(localStorage.getItem("userProfile"));
+
+// Importing some features and other things
 
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
@@ -38,3 +44,13 @@ document.querySelector("form").addEventListener("submit", function (event) {
       window.alert("Login failed!");
     });
 });
+
+// This boots you out of the login page incase you already are logged in
+if (
+  getUserProfile ||
+  localAccessToken ||
+  getUserProfile.accessToken == localAccessToken
+) {
+  console.log("ahhahah");
+  window.location.href = "../index.html";
+}

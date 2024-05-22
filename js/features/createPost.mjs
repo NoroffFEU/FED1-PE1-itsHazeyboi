@@ -1,4 +1,8 @@
-const securityToken = localStorage.getItem("accessToken");
+import { checkLogin } from "./checkLogin.mjs";
+import { blogPostsAPI } from "./API.mjs";
+
+let localAccessToken = localStorage.getItem("accessToken");
+let getUserProfile = JSON.parse(localStorage.getItem("userProfile"));
 let imageUrlTrue = false;
 
 // This snippet updates the backround image right away at the create post page
@@ -11,8 +15,8 @@ document.getElementById("imageURL").addEventListener("input", function () {
   const imageUrl = this.value;
 
   // Check if the entered value is a valid URL
+  // If it's a valid URL, update the image source
   if (/^https?:\/\/\S+\.\S+$/.test(imageUrl)) {
-    // If it's a valid URL, update the image source
     imageContainer.style.backgroundColor = "#00000000";
     newImage.src = imageUrl;
     imageContainer.appendChild(newImage);
@@ -55,7 +59,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
-      Authorization: `Bearer ${securityToken}`,
+      Authorization: `Bearer ${localAccessToken}`,
     },
   })
     .then((response) => response.json())
@@ -70,3 +74,17 @@ export function updateCounter() {
 
   counter.innerText = `${textArea.value.length}/2000`;
 }
+
+// ^ A little something for UX's sake so that its easy to understand that there is a max limit
+// of 2000 characters on the API blog post's post.
+
+if (
+  !getUserProfile ||
+  !localAccessToken ||
+  getUserProfile.accessToken !== localAccessToken
+) {
+  console.log("ahhahah");
+  window.location.href = "../index.html";
+}
+
+// ^ This is just something to prevent users from going to the 'createpost' page without having the proper credentials

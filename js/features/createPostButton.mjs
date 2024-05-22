@@ -13,6 +13,6 @@ export function createPostButton() {
   div.classList.add("create-post-button");
   div.classList.add("flex-r");
   p.innerText = "Create Post";
-  img.src = "media/favicons/plus-sign.svg";
+  img.src = "../media/favicons/plus-sign.svg";
   img.setAttribute("alt", "create post button");
 }

@@ -57,12 +57,18 @@ button {
 }
 
 .create-post-button {
+  transition: 0.4s;
   gap: 10px;
   background-color: #201c34;
   width: fit-content;
   padding: 0px 20px 0px 20px;
   border-radius: 40px;
   cursor: pointer;
+}
+
+.create-post-button:hover {
+  transition: 0.4s;
+  transform: scale(1.1);
 }
 
 .button-square {

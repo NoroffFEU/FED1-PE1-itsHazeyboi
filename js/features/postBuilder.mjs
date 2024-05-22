@@ -1,5 +1,3 @@
-import { blogPostsAPI } from "./API.mjs";
-
 export function blogPostBuilder(blogPost) {
   let blogPostList = document.querySelector(".blogposts-list");
   blogPostList.innerHTML = "";
