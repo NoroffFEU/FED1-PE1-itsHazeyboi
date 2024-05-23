@@ -48,7 +48,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     return;
   }
 
-  fetch("https://v2.api.noroff.dev/blog/posts/Hansi", {
+  fetch(blogPostsAPI, {
     method: "POST",
     body: JSON.stringify({
       media: {

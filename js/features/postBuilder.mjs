@@ -9,6 +9,7 @@ export function blogPostBuilder(blogPost) {
     let postContainerBottomHeader = document.createElement("h2");
 
     postContainer.className = "post-container flex-c";
+    postContainer.id = element.id;
     blogPostImage.className = "blogpost-image";
     postContainerBottom.className =
       "postcontainer-bottom flex-c center-horizontal";
