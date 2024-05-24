@@ -1,4 +1,16 @@
 import { registerAPI } from "./API.mjs";
+import { checkLogin } from "./checkLogin.mjs";
+import { localAccessToken } from "./API.mjs";
+import { getUserProfile } from "./API.mjs";
+
+if (
+  getUserProfile ||
+  localAccessToken ||
+  getUserProfile.accessToken == localAccessToken
+) {
+  console.log("ahhahah");
+  window.location.href = "../index.html";
+}
 
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();

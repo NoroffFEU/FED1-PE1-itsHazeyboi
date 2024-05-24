@@ -1,9 +1,6 @@
-import { loginAPI } from "./API.mjs";
-import { myFetcher } from "./fetcher.mjs";
 import { createPostButton } from "./createPostButton.mjs";
 
 export function checkLogin() {
-  let topHeaderChange = document.querySelector(".header-top");
   let signInText = document.getElementById("signInText");
   let registerText = document.getElementById("registerText");
   let getUserProfile = JSON.parse(localStorage.getItem("userProfile"));

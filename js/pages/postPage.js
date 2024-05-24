@@ -1,5 +1,6 @@
 import { myFetcher } from "../features/fetcher.mjs";
 import { blogPostsAPI } from "../features/API.mjs";
+import { checkLogin } from "../features/checkLogin.mjs";
 
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
@@ -13,6 +14,7 @@ let postAuthor = document.getElementById("postAuthor");
 let postText = document.getElementById("blogpost-text");
 let dateCreated = document.getElementById("publicationDate");
 let updatedTime = document.getElementById("updatedTime");
+
 blogPostImage.src = fetchInfo.data.media.url;
 blogPostImage.setAttribute("alt", fetchInfo.data.media.alt);
 postAuthor.innerText = `Published by: ${fetchInfo.data.author.name}`;

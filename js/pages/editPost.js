@@ -2,6 +2,7 @@ import { blogPostsAPI } from "../features/API.mjs";
 import { myFetcher } from "../features/fetcher.mjs";
 import { localAccessToken } from "../features/API.mjs";
 import { getUserProfile } from "../features/API.mjs";
+import { deleteAPI } from "../features/API.mjs";
 
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
@@ -105,3 +106,29 @@ if (
 }
 
 // ^ This is just something to prevent users from going to the 'createpost' page without having the proper credentials
+let deleteButtonEditPage = document.querySelector(".deleteButtonEditPage");
+deleteButtonEditPage.addEventListener("click", async () => {
+  let userConfirmed = window.confirm("Do you wish to delete this post?");
+  const parameterString = window.location.search;
+  const searchParameters = new URLSearchParams(parameterString);
+  const findId = searchParameters.get("id");
+
+  if (userConfirmed) {
+    try {
+      await fetch(`${deleteAPI}/${findId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer ${localAccessToken}`,
+        },
+      });
+
+      console.log("Post deleted successfully");
+      window.location.href = "../index.html";
+    } catch (error) {
+      console.error("Error deleting the post:", error);
+    }
+  } else {
+    return;
+  }
+});

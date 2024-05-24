@@ -81,6 +81,23 @@ button {
   background-color: #212121;
 }
 
+.deleteButtonEditPage {
+  transition: 0.2s;
+  gap: 15px;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.deleteButtonEditPage:hover {
+  transition: 0.2s;
+  transform: scale(1.15);
+  background-color: #212121;
+}
+
 .adminIcons {
   width: 40px;
 }
