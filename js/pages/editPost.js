@@ -4,6 +4,17 @@ import { localAccessToken } from "../features/API.mjs";
 import { getUserProfile } from "../features/API.mjs";
 import { deleteAPI } from "../features/API.mjs";
 
+if (
+  !getUserProfile ||
+  !localAccessToken ||
+  getUserProfile.accessToken !== localAccessToken
+) {
+  console.log("ahhahah");
+  window.location.href = "../index.html";
+}
+
+// ^ This is just something to prevent users from going to the 'createpost' page without having the proper credentials
+
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
 const pageId = searchParameters.get("id");
@@ -94,18 +105,8 @@ document.querySelector("form").addEventListener("submit", function (event) {
 updateCounter();
 
 // ^ A little something for UX's sake so that its easy to understand that there is a max limit
-// of 2000 characters on the API blog post's post.
+// of 10000 characters on the API blog post's post.
 
-if (
-  !getUserProfile ||
-  !localAccessToken ||
-  getUserProfile.accessToken !== localAccessToken
-) {
-  console.log("ahhahah");
-  window.location.href = "../index.html";
-}
-
-// ^ This is just something to prevent users from going to the 'createpost' page without having the proper credentials
 let deleteButtonEditPage = document.querySelector(".deleteButtonEditPage");
 deleteButtonEditPage.addEventListener("click", async () => {
   let userConfirmed = window.confirm("Do you wish to delete this post?");
