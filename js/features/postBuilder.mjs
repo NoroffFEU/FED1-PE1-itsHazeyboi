@@ -25,6 +25,10 @@ export function blogPostBuilder(blogPost) {
     postContainerBottom.append(postContainerBottomHeader);
     blogPostList.append(postContainer);
 
+    postContainer.addEventListener("click", async () => {
+      window.location.replace(`../post/index.html?id=${postContainer.id}`);
+    });
+
     if (
       getUserProfile &&
       localAccessToken &&
@@ -83,6 +87,12 @@ export function blogPostBuilder(blogPost) {
         } else {
           return;
         }
+      });
+      editButton.addEventListener("click", async () => {
+        let findEditButtonParent = editButton.closest(".post-container");
+        window.location.replace(
+          `../post/edit.html?id=${findEditButtonParent.id}`
+        );
       });
     }
   });
