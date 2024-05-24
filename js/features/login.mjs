@@ -37,6 +37,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
       console.log("json---", data);
       localStorage.setItem("accessToken", data.data.accessToken);
       localStorage.setItem("userProfile", JSON.stringify(data.data));
+      localStorage.setItem("userName", JSON.stringify(data.data.name));
       window.location.href = "../index.html";
     })
     .catch((error) => {

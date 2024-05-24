@@ -44,6 +44,49 @@
 button {
 }
 
+.editButton {
+  transition: 0.2s;
+  gap: 15px;
+  padding: 10px;
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.editButton:hover {
+  transition: 0.2s;
+  transform: scale(1.15);
+  background-color: #212121;
+}
+
+.deleteButton {
+  transition: 0.2s;
+  gap: 15px;
+  padding: 10px;
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.deleteButton:hover {
+  transition: 0.2s;
+  transform: scale(1.15);
+  background-color: #212121;
+}
+
+.adminIcons {
+  width: 40px;
+}
+
+.trashCanImage:hover {
+}
+
 .button-round {
   gap: 10px;
   font-size: 20px;
