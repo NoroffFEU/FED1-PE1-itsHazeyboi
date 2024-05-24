@@ -7,29 +7,44 @@ const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
 const pageId = searchParameters.get("id");
 let postFull = await myFetcher(`${blogPostsAPI}/${pageId}`);
-let imageUrlTrue = false;
 
-console.log(postFull);
+console.log(postFull.data);
 
-// This snippet updates the backround image right away at the create post page
+let imageContainer = document.querySelector(".uploadImageContainer");
+let newImage = document.createElement("img");
+let imageUrlCheck = true;
+newImage.classList.add("blogpost-image");
+newImage.src = postFull.data.media.url;
+imageContainer.innerHTML = "";
+imageContainer.appendChild(newImage);
+
+let imageForm = document.getElementById("imageURL");
+let postTitleForm = document.getElementById("postTitleForm");
+let postContentForm = document.getElementById("postContentForm");
+
+imageForm.defaultValue = postFull.data.media.url;
+postTitleForm.defaultValue = postFull.data.title;
+postContentForm.defaultValue = postFull.data.body;
+
+// This snippet updates the backround image right away at the edit post page
 
 document.getElementById("imageURL").addEventListener("input", function () {
   let imageContainer = document.querySelector(".uploadImageContainer");
+  const imageUrl = this.value;
   let newImage = document.createElement("img");
   newImage.classList.add("blogpost-image");
+  newImage.src = postFull.data.media.url;
   imageContainer.innerHTML = "";
-  const imageUrl = this.value;
-
+  imageContainer.appendChild(newImage);
   // Check if the entered value is a valid URL
   // If it's a valid URL, update the image source
   if (/^https?:\/\/\S+\.\S+$/.test(imageUrl)) {
     imageContainer.style.backgroundColor = "#00000000";
     newImage.src = imageUrl;
-    imageContainer.appendChild(newImage);
-    imageUrlTrue = true;
+    imageUrlCheck = true;
   } else {
-    imageContainer.style.backgroundColor = "#7b7b7b";
-    imageContainer.textContent = "Invalid image URL";
+    newImage.src = postFull.data.media.url;
+    imageUrlCheck = false;
   }
 });
 
@@ -43,20 +58,21 @@ document.querySelector("form").addEventListener("submit", function (event) {
   let postTextContent = document.getElementById("postContentForm").value;
 
   if (!postTitle.trim() || !imageURL.trim() || !postTextContent.trim()) {
-    console.error("Can not submit any empty fields!");
     window.alert("Can not submit any empty fields!");
     return;
   }
 
-  if (!imageUrlTrue) {
-    console.error("Can not submit a wrong URL!");
-    window.alert("Can not submit a wrong URL!");
+  if (!imageUrlCheck) {
+    window.alert("Not a valid URL!");
+    console.log(imageUrlCheck);
     return;
   }
 
-  fetch(blogPostsAPI, {
-    method: "POST",
+  fetch(`${blogPostsAPI}/${pageId}`, {
+    method: "PUT",
     body: JSON.stringify({
+      title: postTitle,
+      body: postTextContent,
       media: {
         url: imageURL,
       },
@@ -74,12 +90,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     .then((window.location.href = "../index.html"));
 });
 
-function updateCounter() {
-  const textArea = document.getElementById("postContentForm");
-  const counter = document.getElementById("counter");
-
-  counter.innerText = `${textArea.value.length}/2000`;
-}
+updateCounter();
 
 // ^ A little something for UX's sake so that its easy to understand that there is a max limit
 // of 2000 characters on the API blog post's post.

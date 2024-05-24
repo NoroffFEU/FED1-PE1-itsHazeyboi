@@ -25,8 +25,12 @@ export function blogPostBuilder(blogPost) {
     postContainerBottom.append(postContainerBottomHeader);
     blogPostList.append(postContainer);
 
-    postContainer.addEventListener("click", async () => {
-      window.location.replace(`../post/index.html?id=${postContainer.id}`);
+    blogPostImage.addEventListener("click", async () => {
+      window.location.replace(`/post/index.html?id=${postContainer.id}`);
+    });
+
+    postContainerBottomHeader.addEventListener("click", async () => {
+      window.location.replace(`/post/index.html?id=${postContainer.id}`);
     });
 
     if (

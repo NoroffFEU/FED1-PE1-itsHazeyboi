@@ -37,7 +37,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
   let postTextContent = document.getElementById("postContentForm").value;
 
   if (!postTitle.trim() || !imageURL.trim() || !postTextContent.trim()) {
-    console.error("Can not submit any empty fields!");
     window.alert("Can not submit any empty fields!");
     return;
   }
@@ -72,11 +71,8 @@ export function updateCounter() {
   const textArea = document.getElementById("postContentForm");
   const counter = document.getElementById("counter");
 
-  counter.innerText = `${textArea.value.length}/2000`;
+  counter.innerText = `${textArea.value.length}/10000`;
 }
-
-// ^ A little something for UX's sake so that its easy to understand that there is a max limit
-// of 2000 characters on the API blog post's post.
 
 if (
   !getUserProfile ||

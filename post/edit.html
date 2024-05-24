@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/templates.css">
     <script type="module" src="../js/pages/editPost.js"></script>
+    <script type="module">
+        function updateCounter() {
+            const textArea = document.getElementById("postContentForm");
+            const counter = document.getElementById("counter");
+
+            counter.innerText = `${textArea.value.length}/10000`;
+        }
+        window.updateCounter = updateCounter;
+    </script>
+    <!-- I had to put the script like this because for some reason it kept referencing 
+    the whole createPost.mjs file and running it when importing a function from that script
+in the header. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -31,7 +43,7 @@
     <main>
         <div class="headTextWrapper flex-r center-vertical">
             <img src="../media/favicons/Line.svg" alt="line">
-            <h1> Create Post </h1>
+            <h1> Edit Post </h1>
             <img src="../media/favicons/Line.svg" alt="line">
         </div>
         <div class="uploadImageContainer flex-c center-both">
@@ -44,7 +56,7 @@
             <label for="postTitleForm"> Post Title </label>
             <input type="text" id="postTitleForm" placeholder="Enter post title">
             <label for="postContentForm"> Post Content </label>
-            <textarea id="postContentForm" maxlength="2000" oninput="updateCounter()" rows="12"
+            <textarea id="postContentForm" maxlength="10000" oninput="updateCounter()" rows="12"
                 placeholder="Enter post content"></textarea>
             <p id="counter">0/2000</p>
             <div class="buttonWrapper center-both">
