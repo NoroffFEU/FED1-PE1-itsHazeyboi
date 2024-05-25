@@ -3,6 +3,7 @@ import { myFetcher } from "../features/fetcher.mjs";
 import { localAccessToken } from "../features/API.mjs";
 import { getUserProfile } from "../features/API.mjs";
 import { deleteAPI } from "../features/API.mjs";
+import { checkLogin } from "../features/checkLogin.mjs";
 
 if (
   !getUserProfile ||

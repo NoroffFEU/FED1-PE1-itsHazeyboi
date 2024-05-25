@@ -49,3 +49,11 @@
   height: 150px;
   background-color: #2b2b2b;
 }
+
+.editOrDeleteWrapper {
+  background-color: #2b2b2b;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
