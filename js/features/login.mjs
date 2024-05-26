@@ -50,7 +50,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
 if (
   getUserProfile ||
   localAccessToken ||
-  getUserProfile.accessToken == localAccessToken
+  (getUserProfile && getUserProfile.accessToken == localAccessToken)
 ) {
   console.log("ahhahah");
   window.location.href = "../index.html";
