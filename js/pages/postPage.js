@@ -6,7 +6,6 @@ const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
 const pageId = searchParameters.get("id");
 const fetchInfo = await myFetcher(`${blogPostsAPI}/${pageId}`);
-console.log(fetchInfo);
 
 const createdAt = fetchInfo.data.created;
 const updatedAt = fetchInfo.data.updated;

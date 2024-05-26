@@ -11,7 +11,6 @@ export function setCorrectPath() {
 export function setCorrectMedia() {
   const gitHubPath = "/FED1-PE1-itsHazeyboi/index.html";
   const currentPath = window.location.pathname;
-  console.log(currentPath);
   const isExactPath = currentPath === gitHubPath;
 
   if (isExactPath) {

@@ -42,7 +42,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     })
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
-      window.alert("Login failed!");
+      window.alert("Login failed! Wrong Username / Password");
     });
 });
 

@@ -14,8 +14,6 @@ const main = async function () {
   try {
     showLoadingIcon();
     const blogPostsToRender = blogPostObjects.slice(0, 12);
-    console.log("The object information", blogPosts);
-    console.log("The different objects", blogPostObjects);
     blogPostBuilder(blogPostsToRender);
     hideLoadingIcon();
   } catch (error) {

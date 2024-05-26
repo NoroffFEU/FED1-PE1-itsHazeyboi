@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   try {
     const data = await myFetcher(blogPostsAPI);
     const data2 = data.data;
-    console.log(data2);
     const lastThreePosts = data2.slice(0, 3);
-    console.log(lastThreePosts);
 
     const scrollLeftButton = document.querySelector(".scroll-left");
     const scrollRightButton = document.querySelector(".scroll-right");
