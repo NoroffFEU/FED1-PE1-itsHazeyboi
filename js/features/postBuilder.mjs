@@ -34,7 +34,7 @@ export function blogPostBuilder(blogPost) {
 
     postContainerBottomHeader.addEventListener("click", async () => {
       window.location.replace(
-        `${setCorrectPath}/post/index.html?id=${postContainer.id}`
+        `${setCorrectPath()}/post/index.html?id=${postContainer.id}`
       );
     });
 
