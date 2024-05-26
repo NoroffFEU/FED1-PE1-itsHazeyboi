@@ -9,4 +9,5 @@ export async function seeMoreButtonFunction() {
   blogPostBuilder(blogPostObjects);
   let blogPostListLength = document.querySelectorAll(".post-container").length;
   console.log(blogPostListLength);
+  seeMoreButton.remove();
 }

@@ -30,6 +30,7 @@ let blogPostListLength = document.querySelectorAll(".post-container").length;
 if (blogPostObjects.length === blogPostListLength) {
   seeMoreButton.remove();
 }
+
 seeMoreButton.addEventListener("click", () => {
   seeMoreButtonFunction();
 });
