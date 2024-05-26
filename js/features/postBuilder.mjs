@@ -1,5 +1,5 @@
 import { getUserProfile, localAccessToken, deleteAPI } from "./API.mjs";
-import { setCorrectPath } from "./windowUrlReplacer";
+import { setCorrectPath } from "./windowUrlReplacer.mjs";
 
 export function blogPostBuilder(blogPost) {
   let blogPostList = document.querySelector(".blogposts-list");
@@ -34,7 +34,7 @@ export function blogPostBuilder(blogPost) {
 
     postContainerBottomHeader.addEventListener("click", async () => {
       window.location.replace(
-        `${setCorrectPath()}/post/index.html?id=${postContainer.id}`
+        `${setCorrectPath}/post/index.html?id=${postContainer.id}`
       );
     });
 
