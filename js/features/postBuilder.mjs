@@ -1,4 +1,5 @@
 import { getUserProfile, localAccessToken, deleteAPI } from "./API.mjs";
+import { setCorrectPath } from "./windowUrlReplacer";
 
 export function blogPostBuilder(blogPost) {
   let blogPostList = document.querySelector(".blogposts-list");
@@ -26,11 +27,15 @@ export function blogPostBuilder(blogPost) {
     blogPostList.append(postContainer);
 
     blogPostImage.addEventListener("click", async () => {
-      window.location.replace(`/post/index.html?id=${postContainer.id}`);
+      window.location.replace(
+        `${setCorrectPath()}/post/index.html?id=${postContainer.id}`
+      );
     });
 
     postContainerBottomHeader.addEventListener("click", async () => {
-      window.location.replace(`/post/index.html?id=${postContainer.id}`);
+      window.location.replace(
+        `${setCorrectPath()}/post/index.html?id=${postContainer.id}`
+      );
     });
 
     if (

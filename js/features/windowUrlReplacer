@@ -1,0 +1,8 @@
+export function setCorrectPath() {
+  const gitHubPath = "/FED1-PE1-itsHazeyboi/";
+  const isFrontPageGithub = window.location.pathname.includes(
+    "https://norofffeu.github.io/FED1-PE1-itsHazeyboi/index.html"
+  );
+  const prefix = isFrontPageGithub ? `${gitHubPath}` : "";
+  return prefix;
+}
