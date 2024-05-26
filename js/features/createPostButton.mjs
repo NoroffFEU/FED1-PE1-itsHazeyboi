@@ -1,4 +1,5 @@
 import { setCorrectPath } from "./windowUrlReplacer.mjs";
+import { setCorrectMedia } from "./windowUrlReplacer.mjs";
 
 export function createPostButton() {
   let headerBottom = document.querySelector(".header-bottom");
@@ -15,6 +16,6 @@ export function createPostButton() {
   div.classList.add("create-post-button");
   div.classList.add("flex-r");
   p.innerText = "Create Post";
-  img.src = "../media/favicons/plus-sign.svg";
+  img.src = `${setCorrectMedia()}`;
   img.setAttribute("alt", "create post button");
 }
