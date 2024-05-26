@@ -125,7 +125,7 @@ deleteButtonEditPage.addEventListener("click", async () => {
         },
       });
 
-      console.log("Post deleted successfully");
+      window.alert("Post deleted successfully");
       window.location.href = "../index.html";
     } catch (error) {
       console.error("Error deleting the post:", error);
