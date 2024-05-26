@@ -1,5 +1,4 @@
-import { setCorrectPath } from "./windowUrlReplacer.mjs";
-import { setCorrectMedia } from "./windowUrlReplacer.mjs";
+import { setCorrectPath, setCorrectMedia } from "./windowUrlReplacer.mjs";
 
 export function createPostButton() {
   let headerBottom = document.querySelector(".header-bottom");
@@ -17,5 +16,8 @@ export function createPostButton() {
   div.classList.add("flex-r");
   p.innerText = "Create Post";
   img.src = `${setCorrectMedia()}`;
+  console.log("Path:", window.location.pathname);
+  console.log("Correct Path:", setCorrectPath());
+  console.log("Correct Media:", setCorrectMedia());
   img.setAttribute("alt", "create post button");
 }
