@@ -9,10 +9,10 @@ export function setCorrectPath() {
 }
 
 export function setCorrectMedia() {
-  const gitHubPath = "norofffeu.github.io/FED1-PE1-itsHazeyboi/";
+  const gitHubPath = "norofffeu.github.io/FED1-PE1-itsHazeyboi/index.html";
   const isFrontPageGithub = window.location.pathname.endsWith(gitHubPath);
   if (isFrontPageGithub) {
-    return "/FED1-PE1-itsHazeyboi/media/favicons/plus-sign.svg";
+    return "./media/favicons/plus-sign.svg";
   } else {
     return "../media/favicons/plus-sign.svg";
   }
