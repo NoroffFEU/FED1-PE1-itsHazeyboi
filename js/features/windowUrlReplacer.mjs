@@ -16,6 +16,6 @@ export function setCorrectMedia() {
   if (isExactPath) {
     return "./media/favicons/plus-sign.svg";
   } else {
-    return "../media/favicons/plus-sign.svg";
+    return "dadada";
   }
 }
