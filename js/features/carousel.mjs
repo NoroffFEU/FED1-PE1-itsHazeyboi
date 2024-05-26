@@ -1,6 +1,7 @@
 import { blogPostsAPI } from "./API.mjs";
 import { loginAPI } from "./API.mjs";
 import { myFetcher } from "./fetcher.mjs";
+import { setCorrectPath } from "./windowUrlReplacer.mjs";
 
 document.addEventListener("DOMContentLoaded", async function () {
   try {
@@ -38,7 +39,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     carouselImage.addEventListener("click", () => {
       let findId = carouselImage.id;
-      window.location.replace(`../post/index.html?id=${findId}`);
+      window.location.replace(
+        `${setCorrectPath()}/post/index.html?id=${findId}`
+      );
     });
   } catch (error) {
     console.error(error);

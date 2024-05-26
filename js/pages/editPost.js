@@ -4,6 +4,7 @@ import { localAccessToken } from "../features/API.mjs";
 import { getUserProfile } from "../features/API.mjs";
 import { deleteAPI } from "../features/API.mjs";
 import { checkLogin } from "../features/checkLogin.mjs";
+import { setCorrectPath } from "../features/windowUrlReplacer.mjs";
 
 if (
   !getUserProfile ||
@@ -126,7 +127,7 @@ deleteButtonEditPage.addEventListener("click", async () => {
       });
 
       window.alert("Post deleted successfully");
-      window.location.href = "../index.html";
+      window.location.href = `../index.html`;
     } catch (error) {
       console.error("Error deleting the post:", error);
     }

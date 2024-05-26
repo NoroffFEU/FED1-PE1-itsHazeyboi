@@ -100,7 +100,7 @@ export function blogPostBuilder(blogPost) {
       editButton.addEventListener("click", async () => {
         let findEditButtonParent = editButton.closest(".post-container");
         window.location.replace(
-          `../post/edit.html?id=${findEditButtonParent.id}`
+          `${setCorrectPath()}/post/edit.html?id=${findEditButtonParent.id}`
         );
       });
     }
