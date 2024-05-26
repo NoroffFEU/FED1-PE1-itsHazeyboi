@@ -22,8 +22,6 @@ const searchParameters = new URLSearchParams(parameterString);
 const pageId = searchParameters.get("id");
 let postFull = await myFetcher(`${blogPostsAPI}/${pageId}`);
 
-console.log(postFull.data);
-
 let imageContainer = document.querySelector(".uploadImageContainer");
 let newImage = document.createElement("img");
 let imageUrlCheck = true;
