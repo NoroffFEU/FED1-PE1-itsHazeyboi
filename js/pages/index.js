@@ -11,9 +11,10 @@ const main = async function () {
     showLoadingIcon();
     const blogPosts = await myFetcher(blogPostsAPI);
     const blogPostObjects = blogPosts.data;
+    const blogPostsToRender = blogPostObjects.slice(0, 12);
     console.log("The object information", blogPosts);
     console.log("The different objects", blogPostObjects);
-    blogPostBuilder(blogPostObjects);
+    blogPostBuilder(blogPostsToRender);
     hideLoadingIcon();
   } catch (error) {
     console.error(error);
@@ -21,3 +22,11 @@ const main = async function () {
 };
 
 main();
+
+let seeMoreButton = document.getElementById("seeMoreButton");
+seeMoreButton.addEventListener("click", async () => {
+  const blogPosts = await myFetcher(blogPostsAPI);
+  const blogPostObjects = blogPosts.data;
+  console.log(blogPostObjects);
+  blogPostBuilder(blogPostObjects);
+});
