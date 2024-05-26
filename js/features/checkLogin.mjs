@@ -29,6 +29,7 @@ export function checkLogin() {
       registerText.setAttribute("href", "");
       localStorage.removeItem("userProfile");
       localStorage.removeItem("accessToken");
+      localStorage.removeItem("userName");
     });
   } else return;
 }
