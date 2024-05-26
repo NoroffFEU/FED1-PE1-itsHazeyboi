@@ -1,3 +1,5 @@
+import { setCorrectPath } from "./windowUrlReplacer.mjs";
+
 export function createPostButton() {
   let headerBottom = document.querySelector(".header-bottom");
   let a = document.createElement("a");
@@ -9,7 +11,7 @@ export function createPostButton() {
   div.appendChild(p);
   div.appendChild(img);
   a.classList.add("text-highlight");
-  a.setAttribute("href", "../post/createpost.html");
+  a.setAttribute("href", `${setCorrectPath()}../post/createpost.html`);
   div.classList.add("create-post-button");
   div.classList.add("flex-r");
   p.innerText = "Create Post";
