@@ -2,6 +2,22 @@
   width: 30px;
 }
 
+.scroll-button {
+  cursor: pointer;
+  height: fit-content;
+  align-self: center;
+  margin: 0px 50px;
+  background-color: 232323;
+  padding: 10px 25px;
+  border-radius: 200px;
+  transition: 0.3s;
+}
+
+.scroll-button:hover {
+  transition: 0.3s;
+  background-color: #2b2b2b;
+}
+
 .carousel-container {
   margin-top: 50px;
   margin-bottom: 40px;
@@ -10,13 +26,19 @@
 .carousel-text {
   position: absolute;
   top: 720px;
+  left: 650px;
+  align-self: flex-start;
   margin-left: 40px;
+  background-color: #282444d2;
+  padding: 5px 20px;
 }
 
 .carousel-blog-post-image {
-  width: 100%;
+  width: 80vw;
   height: 600px;
+  max-width: 1200px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .all-blogposts-wrapper {

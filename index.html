@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/templates.css" />
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/pages/index.js" type="module"></script>
-    <script type="module" src="js/features/carouselImageFetch.mjs"></script>
+    <script type="module" src="js/features/carousel.mjs"></script>
     <script type="module" src="js/features/checkLogin.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,15 +31,14 @@
     </header>
     <main>
         <div class="carousel-container flex-r center-vertical">
-            <img src="media/favicons/Scroll button left.svg" alt="scroll left" />
+            <img class="scroll-left scroll-button" src="media/favicons/Scroll button left.svg" alt="scroll left" />
             <div class="carousel-blog-post">
-                <img class="carousel-blog-post-image" src="media/2020_08_Trending-Technologies-scaled.jpg"
-                    alt="big blogpost" />
+                <img class="carousel-blog-post-image" src="" alt="big blogpost" />
                 <div class="carousel-text">
-                    <h3>Title</h3>
+                    <h3 id="carousel-title">Title</h3>
                 </div>
             </div>
-            <img src="media/favicons/Scroll button right.svg" alt="scroll right" />
+            <img class="scroll-right scroll-button" src="media/favicons/Scroll button right.svg" alt="scroll right" />
         </div>
         <div class="headTextWrapper flex-r center-vertical">
             <img src="media/favicons/Line.svg" alt="line" />
