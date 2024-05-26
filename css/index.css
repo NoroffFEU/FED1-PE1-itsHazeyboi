@@ -25,11 +25,10 @@
 
 .carousel-text {
   position: absolute;
-  top: 720px;
-  left: 650px;
+  top: 715px;
   align-self: flex-start;
-  margin-left: 40px;
-  background-color: #282444d2;
+  margin-left: 15px;
+  background-color: #282444b8;
   padding: 5px 20px;
 }
 
