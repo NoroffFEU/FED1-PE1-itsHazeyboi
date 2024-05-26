@@ -9,7 +9,7 @@ export function setCorrectPath() {
 }
 
 export function setCorrectMedia() {
-  const gitHubPath = "/norofffeu.github.io/FED1-PE1-itsHazeyboi/index.html";
+  const gitHubPath = "/norofffeu.github.io/FED1-PE1-itsHazeyboi/";
   const currentPath = window.location.pathname;
   const isExactPath = currentPath === gitHubPath;
 
