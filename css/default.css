@@ -6,6 +6,9 @@ body {
   font-family: "inter";
   color: aliceblue;
   background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 header {
@@ -52,6 +55,7 @@ header {
 .headTextWrapper {
   gap: 30px;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 main {
@@ -71,7 +75,7 @@ footer {
   bottom: 0;
   width: 100%;
   gap: 20vw;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .footer-infobox {
@@ -116,5 +120,114 @@ footer {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------------- MEDIA QUERIES ------------------------------------------ */
+
+@media screen and (max-width: 1450px) {
+  /* ----------------------------------------- Index Page ------------------------------------------------ */
+
+  #scrollLeftButton {
+    position: absolute;
+    left: 100px;
+  }
+
+  #scrollRightButton {
+    position: absolute;
+    right: 100px;
+  }
+
+  .scroll-button {
+    margin: 0px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #scrollLeftButton {
+    position: absolute;
+    left: 10px;
+  }
+
+  #scrollRightButton {
+    position: absolute;
+    right: 10px;
+  }
+
+  .carousel-blog-post-image {
+    width: 100% !important;
+    height: 400px !important;
+  }
+
+  .carousel-text {
+    left: -15px !important;
+    top: 510px !important;
+  }
+
+  .headTextWrapper {
+    flex-direction: column !important;
+    width: 100%;
+    align-items: center;
+  }
+
+  .blogPostsLine {
+    display: none;
+  }
+
+  .post-container {
+    margin-bottom: 60px !important;
+  }
+
+  .logoimage {
+    width: 30vw;
+    max-width: 180px;
+  }
+
+  #logoImageBottom {
+    display: none;
+  }
+
+  /* ----------------------------------------- Create Post Page ------------------------------------------------ */
+
+  .uploadImageContainer {
+    width: 100%;
+    height: 400px;
+  }
+
+  .postFormContainer {
+    width: 90%;
+  }
+
+  /* ----------------------------------------- Blog Post Index Page ------------------------------------------------ */
+
+  .blogpage-image {
+    width: 100% !important;
+    height: 400px;
+  }
+
+  #postHeaderTitle {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .blogpage-textcontainer {
+    width: 90% !important;
+  }
+
+  .underblogpost {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    font-size: 10px;
+  }
+
+  /* ----------------------------------------- Sign In / Register Page ------------------------------------------------ */
+
+  .formWrapper {
+    width: 90% !important;
+  }
+
+  /* ----------------------------------------- Footer ------------------------------------------------ */
+  footer {
+    gap: 10vw !important;
   }
 }

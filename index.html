@@ -33,19 +33,21 @@
     </header>
     <main>
         <div class="carousel-container flex-r center-vertical">
-            <img class="scroll-left scroll-button" src="media/favicons/Scroll button left.svg" alt="scroll left" />
+            <img class="scroll-left scroll-button" id="scrollLeftButton" src="media/favicons/Scroll button left.svg"
+                alt="scroll left" />
             <div class="carousel-blog-post">
                 <img class="carousel-blog-post-image" src="" alt="big blogpost" />
                 <div class="carousel-text">
                     <h3 id="carousel-title">Title</h3>
                 </div>
             </div>
-            <img class="scroll-right scroll-button" src="media/favicons/Scroll button right.svg" alt="scroll right" />
+            <img class="scroll-right scroll-button" id="scrollRightButton" src="media/favicons/Scroll button right.svg"
+                alt="scroll right" />
         </div>
         <div class="headTextWrapper flex-r center-vertical">
-            <img src="media/favicons/Line.svg" alt="line" />
+            <img src="media/favicons/Line.svg" class="blogPostsLine" alt="line" />
             <h1>Blog Posts</h1>
-            <img src="media/favicons/Line.svg" alt="line" />
+            <img src="media/favicons/Line.svg" class="blogPostsLine" alt="line" />
         </div>
         <div class="all-blogposts-wrapper">
             <div id="loader" style="display: none"></div>
@@ -64,7 +66,7 @@
             <p class="footer-p">Privacy Policy</p>
             <p class="footer-p">Terms And Conditions</p>
         </div>
-        <img class="logoimage" src="media/favicons/Logo.svg" alt="Tech5 Logo" />
+        <img class="logoimage" id="logoImageBottom" src="media/favicons/Logo.svg" alt="Tech5 Logo" />
         <div class="footer-infobox">
             <p class="footer-header">About Us</p>
             <p class="footer-p">Sponsors</p>

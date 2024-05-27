@@ -6,7 +6,7 @@
   cursor: pointer;
   height: fit-content;
   align-self: center;
-  margin: 0px 50px;
+  margin: 0px 30px;
   background-color: 232323;
   padding: 10px 25px;
   border-radius: 200px;
@@ -38,6 +38,7 @@
   max-width: 1200px;
   object-fit: cover;
   cursor: pointer;
+  box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 .all-blogposts-wrapper {
@@ -58,11 +59,13 @@
   width: 356px;
   transition: 0.2s;
   cursor: pointer;
+  margin-bottom: 40px;
 }
 
 .post-container:hover {
   transition: 0.2s;
   transform: scale(1.15);
+  box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.232);
 }
 
 .postcontainer-bottom {
