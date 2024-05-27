@@ -1,6 +1,9 @@
 import { myFetcher } from "../features/fetcher.mjs";
 import { blogPostsAPI } from "../features/API.mjs";
 import { checkLogin } from "../features/checkLogin.mjs";
+import { setCorrectPath } from "../features/windowUrlReplacer.mjs";
+import { getUserProfile } from "../features/API.mjs";
+import { localAccessToken } from "../features/API.mjs";
 
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
@@ -44,4 +47,23 @@ updatedTime.innerText = `Post Updated: ${updatedAtFormatted}`;
 
 if (fetchInfo.data.created === fetchInfo.data.updated) {
   updatedTime.style = "display: none";
+}
+
+if (
+  getUserProfile &&
+  localAccessToken &&
+  getUserProfile.accessToken === localAccessToken
+) {
+  let main = document.querySelector("main");
+  let createEditPostButton = document.createElement("button");
+
+  main.appendChild(createEditPostButton);
+  createEditPostButton.innerText = "Edit Post";
+  createEditPostButton.classList.add("button-square2");
+  createEditPostButton.id = "editButtonPostPage";
+
+  let editPostButton = document.getElementById("editButtonPostPage");
+  editPostButton.addEventListener("click", () => {
+    window.location.replace(`${setCorrectPath()}/post/edit.html?id=${pageId}`);
+  });
 }
