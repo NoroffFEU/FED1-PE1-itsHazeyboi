@@ -3,7 +3,7 @@ aka the 'default' items that stay the same, unless viewporting. */
 
 body {
   margin: 0;
-  font-family: sans-serif, "inter";
+  font-family: "inter";
   color: aliceblue;
   background-color: #212121;
 }
@@ -26,10 +26,6 @@ header {
 .text-highlight {
   color: #ffffff;
   text-decoration: none;
-}
-
-textarea {
-  resize: none;
 }
 
 .header-bottom {
