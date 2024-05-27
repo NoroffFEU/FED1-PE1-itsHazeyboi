@@ -25,3 +25,7 @@
 .underblogpost {
   justify-content: space-between;
 }
+
+#postHeaderTitle {
+  padding: 0px 15px;
+}
