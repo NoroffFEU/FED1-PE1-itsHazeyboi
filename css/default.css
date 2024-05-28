@@ -90,13 +90,13 @@ footer {
 
 .footer-p {
   transition: 0.3s;
-  color: #746e9c;
+  color: #a9a0e0;
   cursor: pointer;
 }
 
 .footer-p:hover {
   transition: 0.3s;
-  color: #a39bd9;
+  color: #ffffff;
   cursor: pointer;
 }
 
