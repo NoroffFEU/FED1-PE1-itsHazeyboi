@@ -140,6 +140,11 @@ footer {
 
   .scroll-button {
     margin: 0px !important;
+    background-color: #61616142;
+  }
+
+  .scroll-button:hover {
+    background-color: #6161616c !important;
   }
 
   /* ----------------------------------------- Footer ------------------------------------------------ */
