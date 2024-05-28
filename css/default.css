@@ -166,8 +166,9 @@ footer {
   }
 
   .carousel-blog-post-image {
-    width: 100% !important;
+    width: 100vw !important;
     height: 400px !important;
+    object-fit: cover !important;
   }
 
   .carousel-text {
