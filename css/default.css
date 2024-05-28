@@ -141,6 +141,12 @@ footer {
   .scroll-button {
     margin: 0px !important;
   }
+
+  /* ----------------------------------------- Footer ------------------------------------------------ */
+
+  footer {
+    gap: 10vw !important;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -228,6 +234,6 @@ footer {
 
   /* ----------------------------------------- Footer ------------------------------------------------ */
   footer {
-    gap: 10vw !important;
+    gap: 15vw !important;
   }
 }
