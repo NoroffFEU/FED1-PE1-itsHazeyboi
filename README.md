@@ -2,7 +2,8 @@
 
 # Techbyte - Blogposts
 
-![image](https://github.com/NoroffFEU/FED1-PE1-itsHazeyboi/assets/117860981/35b30c80-c11b-4a3c-a02c-e56a903ed6d2)
+![image](https://github.com/NoroffFEU/FED1-PE1-itsHazeyboi/assets/117860981/0364bb98-74c6-4809-a964-bf47a2550a5f)
+
 
 
 ## Description
