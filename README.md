@@ -1,6 +1,6 @@
 # Noroff FED1 - Project Exam 1
 
-# Techbyte - Blogposts
+### Techbyte - Blogposts
 
 ![image](https://github.com/NoroffFEU/FED1-PE1-itsHazeyboi/assets/117860981/0364bb98-74c6-4809-a964-bf47a2550a5f)
 
@@ -17,22 +17,17 @@ Through a combination of localstorage, url key & value pairs, and lots more I wa
 - CSS
 - Javascript
 
-## Getting Started
-
-### Installing
-
-
-1. Clone the repo:
-
-```bash
-git clone git@github.com:NoroffFEU/FED1-PE1-itsHazeyboi.git
-```
-
-2. Live-link:
-
-```
-https://norofffeu.github.io/FED1-PE1-itsHazeyboi/index.html
-```
+## Link to Exam Project 
+https://norofffeu.github.io/FED1-PE1-itsHazeyboi/
 
 
+
+Contact
+---
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hans-willmar-berentsen-68a65825a/)
+
+
+License:
+---
+This work is not to be used in any commercial or profitable setting or distributed in that regard in exchange for profit. 
 
