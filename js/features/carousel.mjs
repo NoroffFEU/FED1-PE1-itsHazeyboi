@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     updateCarousel();
 
     scrollLeftButton.addEventListener("click", () => {
-      currentIndex =
-        (currentIndex - 1 + lastThreePosts.length) % lastThreePosts.length;
+      currentIndex = (currentIndex - 1 + lastThreePosts.length) % lastThreePosts.length;
       updateCarousel();
     });
 
@@ -37,9 +36,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     carouselImage.addEventListener("click", () => {
       let findId = carouselImage.id;
-      window.location.replace(
-        `${setCorrectPath()}/post/index.html?id=${findId}`
-      );
+      window.location.href = `${setCorrectPath()}/post/index.html?id=${findId}`;
     });
   } catch (error) {
     console.error(error);
