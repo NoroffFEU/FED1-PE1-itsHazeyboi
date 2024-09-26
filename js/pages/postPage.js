@@ -49,11 +49,7 @@ if (fetchInfo.data.created === fetchInfo.data.updated) {
   updatedTime.style = "display: none";
 }
 
-if (
-  getUserProfile &&
-  localAccessToken &&
-  getUserProfile.accessToken === localAccessToken
-) {
+if (getUserProfile && localAccessToken && getUserProfile.accessToken === localAccessToken) {
   let main = document.querySelector("main");
   let createEditPostButton = document.createElement("button");
 
@@ -64,6 +60,6 @@ if (
 
   let editPostButton = document.getElementById("editButtonPostPage");
   editPostButton.addEventListener("click", () => {
-    window.location.replace(`${setCorrectPath()}/post/edit.html?id=${pageId}`);
+    window.location.href = `${setCorrectPath()}/post/edit.html?id=${pageId}`;
   });
 }

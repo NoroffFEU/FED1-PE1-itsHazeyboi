@@ -14,8 +14,7 @@ export function blogPostBuilder(blogPost) {
     postContainer.className = "post-container flex-c";
     postContainer.id = element.id;
     blogPostImage.className = "blogpost-image";
-    postContainerBottom.className =
-      "postcontainer-bottom flex-c center-horizontal";
+    postContainerBottom.className = "postcontainer-bottom flex-c center-horizontal";
 
     blogPostImage.setAttribute("src", `${element.media.url}`);
     blogPostImage.setAttribute("alt", `${element.media.alt}`);
@@ -27,22 +26,14 @@ export function blogPostBuilder(blogPost) {
     blogPostList.append(postContainer);
 
     blogPostImage.addEventListener("click", async () => {
-      window.location.replace(
-        `${setCorrectPath()}/post/index.html?id=${postContainer.id}`
-      );
+      window.location.href = `${setCorrectPath()}/post/index.html?id=${postContainer.id}`;
     });
 
     postContainerBottomHeader.addEventListener("click", async () => {
-      window.location.replace(
-        `${setCorrectPath()}/post/index.html?id=${postContainer.id}`
-      );
+      window.location.href = `${setCorrectPath()}/post/index.html?id=${postContainer.id}`;
     });
 
-    if (
-      getUserProfile &&
-      localAccessToken &&
-      getUserProfile.accessToken === localAccessToken
-    ) {
+    if (getUserProfile && localAccessToken && getUserProfile.accessToken === localAccessToken) {
       let editOrDeleteWrapper = document.createElement("div");
       let editButton = document.createElement("button");
       let editButtonP = document.createElement("p");
@@ -56,11 +47,7 @@ export function blogPostBuilder(blogPost) {
       editOrDeleteWrapper.append(editButton, deleteButton);
       postContainerBottom.appendChild(editOrDeleteWrapper);
 
-      editOrDeleteWrapper.classList.add(
-        "editOrDeleteWrapper",
-        "flex-r",
-        "center-both"
-      );
+      editOrDeleteWrapper.classList.add("editOrDeleteWrapper", "flex-r", "center-both");
 
       editButton.classList.add("editButton", "flex-r", "center-horizontal");
       editButtonP.innerText = "Edit Post";
@@ -99,9 +86,7 @@ export function blogPostBuilder(blogPost) {
       });
       editButton.addEventListener("click", async () => {
         let findEditButtonParent = editButton.closest(".post-container");
-        window.location.replace(
-          `${setCorrectPath()}/post/edit.html?id=${findEditButtonParent.id}`
-        );
+        window.location.href = `${setCorrectPath()}/post/edit.html?id=${findEditButtonParent.id}`;
       });
     }
   });
